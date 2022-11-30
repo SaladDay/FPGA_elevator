@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Nov 25 23:12:53 2022
+# Process ID: 15724
+# Current directory: E:/VivadoProgram/elevator_design/elevator_design.runs/synth_1
+# Command line: vivado.exe -log elevator_design.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source elevator_design.tcl
+# Log file: E:/VivadoProgram/elevator_design/elevator_design.runs/synth_1/elevator_design.vds
+# Journal file: E:/VivadoProgram/elevator_design/elevator_design.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source elevator_design.tcl -notrace

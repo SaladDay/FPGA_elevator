@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Nov 25 23:13:38 2022
+| Host         : DESKTOP-B3K1H4S running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file elevator_design_control_sets_placed.rpt
+| Design       : elevator_design
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    67 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            6 |
+|      2 |            1 |
+|      3 |            1 |
+|      4 |            1 |
+|      5 |            1 |
+|      7 |            1 |
+|      8 |            1 |
+|    16+ |            1 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | Yes                    |               3 |            1 |
+| No           | Yes                   | No                     |              66 |           19 |
+| Yes          | No                    | No                     |               8 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              19 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+-------------------------------------------------+---------------------------------------+------------------+----------------+
+|             Clock Signal            |                  Enable Signal                  |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-------------------------------------+-------------------------------------------------+---------------------------------------+------------------+----------------+
+|  CLK_100ms/CLK_reg_0                |                                                 |                                       |                1 |              1 |
+|  CLK_100ms/CLK_reg_0                | in_IBUF[1]                                      | genblk1[1].temp_floor_call[1]_i_1_n_0 |                1 |              1 |
+|  CLK_100ms/CLK_reg_0                | in_IBUF[4]                                      | genblk1[4].temp_floor_call[4]_i_1_n_0 |                1 |              1 |
+|  CLK_100ms/CLK_reg_0                | in_IBUF[0]                                      | genblk1[0].temp_floor_call[0]_i_1_n_0 |                1 |              1 |
+|  CLK_100ms/CLK_reg_0                | in_IBUF[2]                                      | genblk1[2].temp_floor_call[2]_i_1_n_0 |                1 |              1 |
+|  CLK_100ms/CLK_reg_0                | in_IBUF[3]                                      | genblk1[3].temp_floor_call[3]_i_1_n_0 |                1 |              1 |
+|  CLK_100ms/CLK_reg_0                | en_IBUF                                         | nolabel_line90/sel[2]_i_1_n_0         |                1 |              2 |
+| ~CLK_s/CLK                          |                                                 | floor_call314_in                      |                1 |              3 |
+|  nolabel_line90/data_reg[3]_i_2_n_0 |                                                 |                                       |                2 |              4 |
+| ~CLK_s/CLK                          | en_IBUF                                         | floor_call314_in                      |                2 |              5 |
+|  CLK_100ms/CLK_reg_0                | en_IBUF                                         | nolabel_line90/SS[0]                  |                1 |              7 |
+|  CLK_s/CLK                          | mealy_state_change_inst01/next_floor[4]_i_1_n_0 |                                       |                5 |              8 |
+|  clk_IBUF_BUFG                      |                                                 | CLK_100ms/SR[0]                       |               19 |             66 |
++-------------------------------------+-------------------------------------------------+---------------------------------------+------------------+----------------+
+
+
